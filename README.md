@@ -22,7 +22,7 @@ pod 'Transition'
 
 ## Author
 
-alistz, nelozx@163.com
+Nelo, nelozx@163.com
 
 ## License
 
