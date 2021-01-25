@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'Transition_Example' do
+  pod 'Transition', :path => '../'
+
+  target 'Transition_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
