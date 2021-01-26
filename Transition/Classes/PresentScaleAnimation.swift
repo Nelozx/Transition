@@ -2,31 +2,16 @@
 
 import UIKit
 
-
-let kScreenWidth = UIScreen.main.bounds.size.width
-let kScreenHeight = UIScreen.main.bounds.size.height
-
-class PresentScaleAnimation: NSObject {
+open class PresentScaleAnimation: Transition {
     
     /** cell在父视图的frame 不能为zero, 这个坐标 需要的是cell转换父视图完成之后的frame */
     public var cellConvertFrame: CGRect = CGRect(x: 1, y: 1, width: 1, height: 1)
-}
-
-extension PresentScaleAnimation: UIViewControllerAnimatedTransitioning {
     
     
-    /// 过度时间
-    /// - Parameter transitionContext: 上下文
-    /// - Returns: dush
-    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        0.25
-    }
-    
-    func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+    public override func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         guard let toVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to) else {
             return
         }
-        
         
         if self.cellConvertFrame.equalTo(.zero) {
             transitionContext.completeTransition(true)
@@ -56,10 +41,5 @@ extension PresentScaleAnimation: UIViewControllerAnimatedTransitioning {
         }
     }
       
-
-    
-    
-    
-    
 }
 

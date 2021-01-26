@@ -14,6 +14,7 @@
 		910CE6F546CE64DC1023568699D07EEA /* Transition-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 96056B85516E5DD6D223423B382A603A /* Transition-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		94CACB0B2092D1F1BD97386497C3450D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		A483F8E6F6A09B92004F8DBAEB270847 /* Transition-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A4B28D25D7BF11D29DF2CA42923048FE /* Transition-dummy.m */; };
+		C69904E825BFECD60017D899 /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69904E725BFECD60017D899 /* Transition.swift */; };
 		C769A66C35360171835F02A609EC9A66 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		D37D3103717FA25D483D02864040A032 /* PresentScaleAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6FBAB59AE5CC476C00CE2058C12777 /* PresentScaleAnimation.swift */; };
 /* End PBXBuildFile section */
@@ -30,7 +31,7 @@
 
 /* Begin PBXFileReference section */
 		05705FED352E4A70E149E5E1970A0A57 /* Transition.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Transition.modulemap; sourceTree = "<group>"; };
-		06B2463706F0758462CDDEF6EBE97AA0 /* Transition.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = Transition.podspec; sourceTree = "<group>"; tabWidth = 2; };
+		06B2463706F0758462CDDEF6EBE97AA0 /* Transition.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = Transition.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		1BCF5CE36C7F7C0A252D4846D2D5BD9B /* Pods-Transition_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Transition_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		26BCC06746651C5136A5BB4C65C6BE4D /* Transition.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Transition.release.xcconfig; sourceTree = "<group>"; };
 		28DAEB02261571F7EB26E601CB23EDE6 /* Transition.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Transition.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +52,7 @@
 		A84D194F4B8CD28EA5CBBD32D5BD4DC1 /* Pods-Transition_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Transition_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		B0EB1CB49D00FDED0B419F1395590752 /* Transition.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Transition.debug.xcconfig; sourceTree = "<group>"; };
 		BC585E249FE3BCB52808817DFB470142 /* Transition-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Transition-prefix.pch"; sourceTree = "<group>"; };
+		C69904E725BFECD60017D899 /* Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
 		CB6FBAB59AE5CC476C00CE2058C12777 /* PresentScaleAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PresentScaleAnimation.swift; path = Transition/Classes/PresentScaleAnimation.swift; sourceTree = "<group>"; };
 		CE9C031E5E1A21CAC759BF52A076B9B2 /* DragLeftInteractiveTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DragLeftInteractiveTransition.swift; path = Transition/Classes/DragLeftInteractiveTransition.swift; sourceTree = "<group>"; };
 		D4BDF42DDD61B0F726633C242F02CAE0 /* Pods-Transition_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Transition_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -147,9 +149,10 @@
 		CA99CDB448DEA7E28639C7CBB8CC8925 /* Transition */ = {
 			isa = PBXGroup;
 			children = (
+				C69904E725BFECD60017D899 /* Transition.swift */,
+				CB6FBAB59AE5CC476C00CE2058C12777 /* PresentScaleAnimation.swift */,
 				8B4E63F5399CEDBE5BC652A679F7B76F /* DismissScaleAnimation.swift */,
 				CE9C031E5E1A21CAC759BF52A076B9B2 /* DragLeftInteractiveTransition.swift */,
-				CB6FBAB59AE5CC476C00CE2058C12777 /* PresentScaleAnimation.swift */,
 				A8CBE1927100528021264F0DCD2A14B6 /* Pod */,
 				0C920C51D8DDB8B012A61C907D651126 /* Support Files */,
 			);
@@ -293,6 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C69904E825BFECD60017D899 /* Transition.swift in Sources */,
 				02E5EDC8AF6C012C0DFEB4505B2C14C3 /* DismissScaleAnimation.swift in Sources */,
 				8A302029F272AD69A5C7732790E03FF2 /* DragLeftInteractiveTransition.swift in Sources */,
 				D37D3103717FA25D483D02864040A032 /* PresentScaleAnimation.swift in Sources */,
@@ -386,10 +390,11 @@
 			};
 			name = Debug;
 		};
-		63E9AEA310ADCECBFD8CA698CF2979E5 /* Debug */ = {
+		55C5BD8ECE142CC0E93A9386350A1134 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B0EB1CB49D00FDED0B419F1395590752 /* Transition.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -401,7 +406,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Transition/Transition-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Transition/Transition-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Transition/Transition.modulemap";
 				PRODUCT_MODULE_NAME = Transition;
@@ -409,17 +414,18 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		6C2EE4957663F686F9ED351296CC0FBC /* Release */ = {
+		C866A100B772FAA0CEC4ED2AA3208D13 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 26BCC06746651C5136A5BB4C65C6BE4D /* Transition.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -431,7 +437,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Transition/Transition-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Transition/Transition-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Transition/Transition.modulemap";
 				PRODUCT_MODULE_NAME = Transition;
@@ -439,7 +445,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -588,8 +594,8 @@
 		7614501E4A81BA444AF2516CE8CA211F /* Build configuration list for PBXNativeTarget "Transition" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				63E9AEA310ADCECBFD8CA698CF2979E5 /* Debug */,
-				6C2EE4957663F686F9ED351296CC0FBC /* Release */,
+				55C5BD8ECE142CC0E93A9386350A1134 /* Debug */,
+				C866A100B772FAA0CEC4ED2AA3208D13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  Transition
 //
-//  Created by alistz on 01/25/2021.
-//  Copyright (c) 2021 alistz. All rights reserved.
+//  Created by Nelo on 01/25/2021.
+//  Copyright (c) 2021 Nelo. All rights reserved.
 //
 
 import UIKit

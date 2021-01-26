@@ -1,22 +1,24 @@
 {
   "name": "Transition",
-  "version": "0.1.0",
-  "summary": "A short description of Transition.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/alistz/Transition",
+  "version": "0.0.1",
+  "summary": "Easy interactive interruptible custom ViewController transitions",
+  "description": "ViewController transitions",
+  "homepage": "https://github.com/Nelozx/Transition",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "alistz": "nelozx@163.com"
+    "Nelo": "nelozx@163.com"
   },
   "source": {
-    "git": "https://github.com/alistz/Transition.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/Nelozx/Transition.git",
+    "tag": "0.0.1"
   },
   "platforms": {
-    "ios": "9.0"
+    "ios": "10.0"
   },
-  "source_files": "Transition/Classes/**/*"
+  "swift_versions": "5.0",
+  "source_files": "Transition/Classes/**/*",
+  "swift_version": "5.0"
 }

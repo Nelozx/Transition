@@ -8,7 +8,7 @@
 import UIKit
 
 
-class DragLeftInteractiveTransition: UIPercentDrivenInteractiveTransition {
+open class DragLeftInteractiveTransition: UIPercentDrivenInteractiveTransition {
     
     fileprivate var presentingVC: UIViewController!
     
@@ -18,15 +18,16 @@ class DragLeftInteractiveTransition: UIPercentDrivenInteractiveTransition {
     public var isInteracting = false
 
     public func writeToViewController(_ viewController: UIViewController) {
-        
+        self.presentingVC = viewController;
+        self.viewControllerCenter = viewController.view.center
+        self.prepareGestureRecognizer(in: viewController.view)
     }
     
-    override func update(_ percentComplete: CGFloat) {}
+    open override func update(_ percentComplete: CGFloat) {}
     
-    override func cancel() {}
+    open override func cancel() {}
 
-    override func finish() {}
-    
+    open override func finish() {}
     
 }
 
@@ -52,7 +53,7 @@ extension DragLeftInteractiveTransition {
         case .began:
             //修复当从右侧向左滑动的时候的bug 避免开始的时候从又向左滑动 当未开始的时候
             let vel = gestureRecognizer.velocity(in: vcView)
-           
+            
             if !isInteracting && vel.x < 0 {
                 isInteracting = false
                 return
@@ -74,19 +75,33 @@ extension DragLeftInteractiveTransition {
             progress = CGFloat(fminf(fmaxf(Float(progress), 0.0), 1.0))
             let ratio = 1.0 - progress*0.5
             presentingVC.view.center = CGPoint(x: viewControllerCenter.x + translation.x * ratio, y: viewControllerCenter.y + translation.y + ratio)
-
+            
             presentingVC.view.transform = CGAffineTransform(scaleX: ratio, y: ratio)
             
             break
+        case .cancelled, .ended:
+            var progress = translation.x/kScreenWidth
             
+            progress = CGFloat(fminf(fmaxf(Float(progress), 0.0), 1.0))
+            
+            if progress < 0.2 {
+                
+                UIView.animate(withDuration: TimeInterval(progress), delay: 0, options: .curveEaseOut) {
+                    self.presentingVC.view.center = CGPoint(x: kScreenWidth*0.5, y: kScreenHeight*0.5)
+                    self.presentingVC.view.transform = CGAffineTransform(scaleX: 1, y: 1)
+                } completion: { (finised) in
+                    self.isInteracting = false
+                    self.cancel()
+                }
+            } else {
+                isInteracting = false
+                self.finish()
+                presentingVC.dismiss(animated: true, completion: nil)
+            }
+            /// 移除 遮罩
+            transitionMaskLayer.removeFromSuperlayer()
+            break
         default:break
-//        case .cancelled, .ended:
-//
-//
-//
-//        case .possible:
-//
-//        case .failed:
             
         }
         

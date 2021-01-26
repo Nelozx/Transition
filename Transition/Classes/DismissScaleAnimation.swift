@@ -8,22 +8,17 @@
 import UIKit
 
 
-class DismissScaleAnimation: NSObject {
+open class DismissScaleAnimation: Transition {
     
     public var centerFrame = CGRect(x: (kScreenWidth - 5)*0.5, y: (kScreenHeight - 5)*0.5, width: 5, height: 5)
     public var originCellFrame: CGRect?
     public var finalCellFrame: CGRect?
     public var selectCell: UIView?
     
-}
-
-extension DismissScaleAnimation: UIViewControllerAnimatedTransitioning {
-    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        0.25
-    }
     
-    func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
-        
+    
+    
+    public override func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         guard let fromVC = transitionContext.viewController(forKey: .from) else {
             return
         }
@@ -64,6 +59,5 @@ extension DismissScaleAnimation: UIViewControllerAnimatedTransitioning {
             snapshotView.removeFromSuperview()
         })
     }
-
     
 }
