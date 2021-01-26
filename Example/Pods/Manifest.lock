@@ -2,15 +2,20 @@ PODS:
   - Transition (0.0.1)
 
 DEPENDENCIES:
-  - Transition (from `../`)
+  - Transition (from `https://github.com/Nelozx/Transition.git`)
 
 EXTERNAL SOURCES:
   Transition:
-    :path: "../"
+    :git: https://github.com/Nelozx/Transition.git
+
+CHECKOUT OPTIONS:
+  Transition:
+    :commit: 26cd85693febcdb7d99e167befae41c085f59a80
+    :git: https://github.com/Nelozx/Transition.git
 
 SPEC CHECKSUMS:
   Transition: 81662f495dde8d5eb8d4890f92e81a092ffd7b01
 
-PODFILE CHECKSUM: 09ab5b9a44750dc0902318bc220580093087de4b
+PODFILE CHECKSUM: 37449300b6a0384797a53ec347d3b4ce8525d19f
 
 COCOAPODS: 1.10.1

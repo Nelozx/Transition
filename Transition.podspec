@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-             ViewController transitions
+             TikTok's ViewController transitions animation
                        DESC
 
   s.homepage         = 'https://github.com/Nelozx/Transition'
